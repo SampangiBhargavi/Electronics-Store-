@@ -1,0 +1,754 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders - ElectroMart</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg orders-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand text-white fw-bold fs-4" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i>
+            ElectroMart
+        </a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ordersNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="ordersNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="categories.html">
+                        Categories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="brands.html">
+                        Brands
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="deals.html">
+                        Deals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="new-arrivals.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <a href="wishlist.html"
+                   class="btn btn-outline-light">
+
+                    <i class="bi bi-heart"></i>
+                    Wishlist
+
+                </a>
+
+                <a href="cart.html"
+                   class="btn btn-outline-light">
+
+                    <i class="bi bi-cart3"></i>
+                    Cart
+
+                </a>
+
+                <a href="orders.html"
+                   class="btn btn-light orders-nav-btn">
+
+                    <i class="bi bi-box-seam"></i>
+                    Orders
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="orders-page-header">
+
+    <div class="container">
+
+        <div class="orders-header-content">
+
+            <span class="orders-small-title">
+                <i class="bi bi-box-seam"></i>
+                MY SHOPPING
+            </span>
+
+            <h1>My Orders</h1>
+
+            <p>
+                Track your orders, check delivery status and view
+                your previous purchases.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ORDERS SECTION ================= -->
+
+<section class="orders-section">
+
+    <div class="container">
+
+        <!-- ORDER SUMMARY -->
+
+        <div class="orders-summary">
+
+            <div class="order-summary-box">
+
+                <div class="order-summary-icon">
+                    <i class="bi bi-box"></i>
+                </div>
+
+                <div>
+                    <h3>3</h3>
+                    <p>Total Orders</p>
+                </div>
+
+            </div>
+
+
+            <div class="order-summary-box">
+
+                <div class="order-summary-icon delivered">
+                    <i class="bi bi-check-circle"></i>
+                </div>
+
+                <div>
+                    <h3>2</h3>
+                    <p>Delivered</p>
+                </div>
+
+            </div>
+
+
+            <div class="order-summary-box">
+
+                <div class="order-summary-icon shipping">
+                    <i class="bi bi-truck"></i>
+                </div>
+
+                <div>
+                    <h3>1</h3>
+                    <p>On the Way</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ORDER 1 ================= -->
+
+        <div class="order-card">
+
+            <div class="order-card-header">
+
+                <div>
+
+                    <span class="order-label">
+                        ORDER ID
+                    </span>
+
+                    <h4>#EM20261001</h4>
+
+                </div>
+
+                <div class="order-status delivered-status">
+
+                    <i class="bi bi-check-circle-fill"></i>
+                    Delivered
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-body">
+
+                <div class="order-product">
+
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80"
+                         alt="Smartphone Pro">
+
+                    <div class="order-product-details">
+
+                        <span>Mobiles & Tablets</span>
+
+                        <h3>Smartphone Pro</h3>
+
+                        <p>
+                            Black | 8GB RAM | 256GB Storage
+                        </p>
+
+                        <strong>
+                            ₹49,999
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="order-information">
+
+                    <div>
+                        <span>ORDER DATE</span>
+                        <p>01 Oct 2026</p>
+                    </div>
+
+                    <div>
+                        <span>DELIVERED ON</span>
+                        <p>03 Oct 2026</p>
+                    </div>
+
+                    <div>
+                        <span>PAYMENT</span>
+                        <p>UPI</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-footer">
+
+                <div class="order-total">
+
+                    Total:
+                    <strong>₹49,999</strong>
+
+                </div>
+
+                <div class="order-actions">
+
+                    <a href="product-details.html"
+                       class="btn order-view-btn">
+
+                        <i class="bi bi-eye"></i>
+                        View Product
+
+                    </a>
+
+                    <button class="btn order-review-btn"
+                            onclick="showReviewMessage()">
+
+                        <i class="bi bi-star"></i>
+                        Write Review
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ORDER 2 ================= -->
+
+        <div class="order-card">
+
+            <div class="order-card-header">
+
+                <div>
+
+                    <span class="order-label">
+                        ORDER ID
+                    </span>
+
+                    <h4>#EM20260928</h4>
+
+                </div>
+
+                <div class="order-status delivered-status">
+
+                    <i class="bi bi-check-circle-fill"></i>
+                    Delivered
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-body">
+
+                <div class="order-product">
+
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80"
+                         alt="Wireless Headphones">
+
+                    <div class="order-product-details">
+
+                        <span>Audio & Headphones</span>
+
+                        <h3>Wireless Headphones</h3>
+
+                        <p>
+                            Noise Cancellation | Bluetooth
+                        </p>
+
+                        <strong>
+                            ₹3,899
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="order-information">
+
+                    <div>
+                        <span>ORDER DATE</span>
+                        <p>28 Sep 2026</p>
+                    </div>
+
+                    <div>
+                        <span>DELIVERED ON</span>
+                        <p>30 Sep 2026</p>
+                    </div>
+
+                    <div>
+                        <span>PAYMENT</span>
+                        <p>Card</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-footer">
+
+                <div class="order-total">
+
+                    Total:
+                    <strong>₹3,899</strong>
+
+                </div>
+
+                <div class="order-actions">
+
+                    <a href="product-details.html"
+                       class="btn order-view-btn">
+
+                        <i class="bi bi-eye"></i>
+                        View Product
+
+                    </a>
+
+                    <button class="btn order-review-btn"
+                            onclick="showReviewMessage()">
+
+                        <i class="bi bi-star"></i>
+                        Write Review
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ORDER 3 ================= -->
+
+        <div class="order-card">
+
+            <div class="order-card-header">
+
+                <div>
+
+                    <span class="order-label">
+                        ORDER ID
+                    </span>
+
+                    <h4>#EM20261003</h4>
+
+                </div>
+
+                <div class="order-status shipping-status">
+
+                    <i class="bi bi-truck"></i>
+                    On the Way
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-body">
+
+                <div class="order-product">
+
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+                         alt="Smart Watch Series">
+
+                    <div class="order-product-details">
+
+                        <span>Smartwatches</span>
+
+                        <h3>Smart Watch Series</h3>
+
+                        <p>
+                            AMOLED Display | Fitness Tracking
+                        </p>
+
+                        <strong>
+                            ₹5,499
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="order-information">
+
+                    <div>
+                        <span>ORDER DATE</span>
+                        <p>03 Oct 2026</p>
+                    </div>
+
+                    <div>
+                        <span>EXPECTED DELIVERY</span>
+                        <p>06 Oct 2026</p>
+                    </div>
+
+                    <div>
+                        <span>PAYMENT</span>
+                        <p>UPI</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY TRACKING -->
+
+            <div class="order-tracking">
+
+                <div class="tracking-step completed">
+
+                    <div class="tracking-icon">
+                        <i class="bi bi-check"></i>
+                    </div>
+
+                    <span>Ordered</span>
+
+                </div>
+
+
+                <div class="tracking-line completed-line"></div>
+
+
+                <div class="tracking-step completed">
+
+                    <div class="tracking-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+
+                    <span>Packed</span>
+
+                </div>
+
+
+                <div class="tracking-line active-line"></div>
+
+
+                <div class="tracking-step active">
+
+                    <div class="tracking-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+
+                    <span>Shipped</span>
+
+                </div>
+
+
+                <div class="tracking-line"></div>
+
+
+                <div class="tracking-step">
+
+                    <div class="tracking-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+
+                    <span>Delivered</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="order-card-footer">
+
+                <div class="order-total">
+
+                    Total:
+                    <strong>₹5,499</strong>
+
+                </div>
+
+                <div class="order-actions">
+
+                    <button class="btn order-track-btn"
+                            onclick="showTrackingMessage()">
+
+                        <i class="bi bi-geo-alt"></i>
+                        Track Order
+
+                    </button>
+
+                    <a href="product-details.html"
+                       class="btn order-view-btn">
+
+                        <i class="bi bi-eye"></i>
+                        View Product
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SHOP MORE ================= -->
+
+        <div class="orders-shop-more">
+
+            <div>
+
+                <i class="bi bi-bag-heart"></i>
+
+                <div>
+
+                    <h3>Looking for something new?</h3>
+
+                    <p>
+                        Explore our latest electronics and exciting deals.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="shop.html" class="btn orders-shop-btn">
+
+                Continue Shopping
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="orders-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <h4>
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    ElectroMart
+                </h4>
+
+                <p>
+                    Your trusted destination for smartphones,
+                    laptops, audio devices, cameras and more.
+                </p>
+
+                <div class="orders-social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Quick Links</h5>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="deals.html">Deals</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>My Account</h5>
+
+                <a href="orders.html">My Orders</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>Contact</h5>
+
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    Hyderabad, Telangana
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    support@electromart.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 ElectroMart. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function showReviewMessage() {
+
+    alert("Review feature will be available soon.");
+
+}
+
+
+function showTrackingMessage() {
+
+    alert("Your order is currently on the way. Expected delivery: 06 Oct 2026.");
+
+}
+
+</script>
+
+</body>
+</html>
+```

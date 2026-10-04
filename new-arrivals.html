@@ -1,0 +1,783 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Arrivals - ElectroMart</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark new-navbar">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i>
+            ElectroMart
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="brands.html">Brands</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="deals.html">Deals</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="new-arrivals.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-2">
+
+                <a href="wishlist.html"
+                   class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-heart"></i>
+                </a>
+
+                <a href="cart.html"
+                   class="btn btn-light btn-sm">
+                    <i class="bi bi-cart3"></i>
+                </a>
+
+                <a href="login.html"
+                   class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-person"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="new-arrivals-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <span class="new-arrivals-small-title">
+                    FRESH ARRIVALS
+                </span>
+
+                <h1>
+                    Discover What's <span>New</span>
+                </h1>
+
+                <p>
+                    Explore the latest electronics, newly launched gadgets
+                    and innovative devices available at ElectroMart.
+                </p>
+
+                <a href="#new-products"
+                   class="btn new-arrivals-primary-btn">
+                    Explore New Arrivals
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="col-lg-5 text-center">
+
+                <div class="new-arrivals-hero-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NEW PRODUCTS ================= -->
+
+<section class="new-products-section" id="new-products">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="new-section-label">
+                JUST LAUNCHED
+            </span>
+
+            <h2 class="new-section-title">
+                Latest Products
+            </h2>
+
+            <p class="text-muted">
+                Be the first to experience our newest electronics.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            NEW
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=80"
+                             alt="New Smartphone">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Smartphones</small>
+
+                        <h5>Galaxy X Pro</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span>4.7</span>
+                        </div>
+
+                        <h4>₹54,999</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            JUST IN
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                             alt="New Laptop">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Laptops</small>
+
+                        <h5>ProBook 14</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span>4.6</span>
+                        </div>
+
+                        <h4>₹68,999</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            NEW
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                             alt="New Headphones">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Audio</small>
+
+                        <h5>Noise Cancelling Headphones</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <h4>₹7,499</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            NEW
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=700&q=80"
+                             alt="New Smart Watch">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Wearables</small>
+
+                        <h5>Smart Watch Ultra</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span>4.5</span>
+                        </div>
+
+                        <h4>₹8,999</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            JUST IN
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80"
+                             alt="New Camera">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Cameras</small>
+
+                        <h5>Mirrorless Camera</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span>4.7</span>
+                        </div>
+
+                        <h4>₹74,999</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            NEW
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=80"
+                             alt="Gaming Keyboard">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Gaming</small>
+
+                        <h5>RGB Gaming Keyboard</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span>4.6</span>
+                        </div>
+
+                        <h4>₹3,499</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            NEW
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80"
+                             alt="Wireless Earbuds">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Audio</small>
+
+                        <h5>Wireless Earbuds Pro</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <h4>₹4,999</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="new-product-card">
+
+                    <div class="new-product-image">
+
+                        <span class="new-product-badge">
+                            JUST IN
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80"
+                             alt="Bluetooth Speaker">
+
+                    </div>
+
+                    <div class="new-product-content">
+
+                        <small>Speakers</small>
+
+                        <h5>Portable Bluetooth Speaker</h5>
+
+                        <div class="new-product-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span>4.5</span>
+                        </div>
+
+                        <h4>₹5,499</h4>
+
+                        <a href="product-details.html"
+                           class="btn new-view-btn w-100">
+                            View Product
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY NEW ARRIVALS ================= -->
+
+<section class="new-benefits-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="new-section-label">
+                WHY SHOP NEW
+            </span>
+
+            <h2 class="new-section-title">
+                Be First to Experience More
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="new-benefit-box">
+
+                    <div class="new-benefit-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <h5>Latest Technology</h5>
+
+                    <p>
+                        Discover the newest devices and latest technology
+                        as soon as they arrive.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="new-benefit-box">
+
+                    <div class="new-benefit-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h5>Genuine Products</h5>
+
+                    <p>
+                        Shop authentic electronics from trusted brands
+                        with reliable product quality.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="new-benefit-box">
+
+                    <div class="new-benefit-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+
+                    <h5>Fast Delivery</h5>
+
+                    <p>
+                        Get your newly launched products delivered
+                        quickly and safely to your doorstep.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="new-cta-section">
+
+    <div class="container">
+
+        <div class="new-cta">
+
+            <div>
+
+                <span>
+                    LOOKING FOR MORE?
+                </span>
+
+                <h2>
+                    Explore Our Complete Collection
+                </h2>
+
+                <p>
+                    Find smartphones, laptops, cameras, audio devices,
+                    gaming products and more.
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="shop.html"
+                   class="btn new-cta-btn">
+                    Shop All Products
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="new-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <h4>
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    ElectroMart
+                </h4>
+
+                <p>
+                    Your trusted destination for the latest electronics,
+                    gadgets and smart technology.
+                </p>
+
+                <div class="new-social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h6>Quick Links</h6>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="brands.html">Brands</a>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h6>Explore</h6>
+
+                <a href="deals.html">Deals</a>
+                <a href="new-arrivals.html">New Arrivals</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h6>Contact Us</h6>
+
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    Hyderabad, Telangana
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    support@electromart.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 ElectroMart. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
+```

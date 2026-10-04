@@ -1,0 +1,1608 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - ElectroMart</title>
+
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-light">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-dark bg-primary px-4">
+    <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-lightning-charge-fill"></i>
+        ElectroMart
+    </a>
+
+    <div class="d-flex align-items-center gap-3">
+
+        <span class="badge bg-warning text-dark">
+            <i class="bi bi-shield-lock-fill"></i>
+            Admin
+        </span>
+
+        <a href="index.html"
+            class="btn btn-light btn-sm">
+            <i class="bi bi-shop"></i>
+            View Store
+        </a>
+
+        <button class="btn btn-danger btn-sm"
+            onclick="adminLogout()">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </button>
+
+    </div>
+</nav>
+
+
+<!-- ================= PAGE ================= -->
+
+<div class="container-fluid py-4">
+
+    <h2 class="fw-bold mb-4">
+        <i class="bi bi-speedometer2"></i>
+        Admin Dashboard
+    </h2>
+
+
+    <!-- ================= DASHBOARD CARDS ================= -->
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6 class="text-muted">
+                                Total Products
+                            </h6>
+
+                            <h3 id="totalProducts"
+                                class="fw-bold">
+                                0
+                            </h3>
+                        </div>
+
+                        <i class="bi bi-box-seam fs-1 text-primary"></i>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6 class="text-muted">
+                                Total Orders
+                            </h6>
+
+                            <h3 id="totalOrders"
+                                class="fw-bold">
+                                0
+                            </h3>
+                        </div>
+
+                        <i class="bi bi-cart-check fs-1 text-success"></i>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6 class="text-muted">
+                                Customers
+                            </h6>
+
+                            <h3 id="totalCustomers"
+                                class="fw-bold">
+                                0
+                            </h3>
+                        </div>
+
+                        <i class="bi bi-people fs-1 text-warning"></i>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6 class="text-muted">
+                                Total Sales
+                            </h6>
+
+                            <h3 id="totalSales"
+                                class="fw-bold">
+                                ₹0
+                            </h3>
+                        </div>
+
+                        <i class="bi bi-currency-rupee fs-1 text-danger"></i>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= QUICK ACTIONS ================= -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header bg-white">
+            <h5 class="mb-0 fw-bold">
+                Quick Actions
+            </h5>
+        </div>
+
+        <div class="card-body">
+
+            <button class="btn btn-primary me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#addProductModal"
+                onclick="prepareAddProduct()">
+
+                <i class="bi bi-plus-circle"></i>
+                Add Product
+
+            </button>
+
+            <button class="btn btn-success me-2"
+                onclick="showOrders()">
+
+                <i class="bi bi-cart-check"></i>
+                View Orders
+
+            </button>
+
+            <button class="btn btn-warning"
+                onclick="showCustomers()">
+
+                <i class="bi bi-people"></i>
+                View Customers
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PRODUCT MANAGEMENT ================= -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-header bg-white">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-box-seam"></i>
+                    Product Management
+                </h5>
+
+                <div style="max-width:300px">
+
+                    <input type="text"
+                        id="adminProductSearch"
+                        class="form-control"
+                        placeholder="Search products..."
+                        onkeyup="searchAdminProducts()">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-light">
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="productTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ORDERS ================= -->
+
+    <div class="card shadow-sm border-0 mb-4"
+        id="ordersSection"
+        style="display:none">
+
+        <div class="card-header bg-white">
+
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-cart-check"></i>
+                Orders
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="ordersTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CUSTOMERS ================= -->
+
+    <div class="card shadow-sm border-0 mb-4"
+        id="customersSection"
+        style="display:none">
+
+        <div class="card-header bg-white">
+
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-people"></i>
+                Customers
+            </h5>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="customersTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- ADD / EDIT PRODUCT MODAL -->
+<!-- ================================================= -->
+
+<div class="modal fade"
+    id="addProductModal"
+    tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title"
+                    id="productModalTitle">
+
+                    <i class="bi bi-plus-circle"></i>
+                    Add Product
+
+                </h5>
+
+                <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <input type="hidden"
+                    id="editingProductId">
+
+
+                <div class="row g-3">
+
+                    <!-- PRODUCT NAME -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label fw-bold">
+                            Product Name
+                        </label>
+
+                        <input type="text"
+                            id="productName"
+                            class="form-control"
+                            placeholder="Enter product name">
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label fw-bold">
+                            Category
+                        </label>
+
+                        <select id="productCategory"
+                            class="form-select">
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option>
+                                Mobiles & Tablets
+                            </option>
+
+                            <option>
+                                Laptops & Computers
+                            </option>
+
+                            <option>
+                                Audio & Headphones
+                            </option>
+
+                            <option>
+                                Smartwatches
+                            </option>
+
+                            <option>
+                                Cameras & Photography
+                            </option>
+
+                            <option>
+                                Gaming & Accessories
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BRAND -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label fw-bold">
+                            Brand
+                        </label>
+
+                        <input type="text"
+                            id="productBrand"
+                            class="form-control"
+                            placeholder="Enter brand">
+
+                    </div>
+
+
+                    <!-- PRICE -->
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Price
+                        </label>
+
+                        <input type="number"
+                            id="productPrice"
+                            class="form-control"
+                            placeholder="Price">
+
+                    </div>
+
+
+                    <!-- OLD PRICE -->
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Old Price
+                        </label>
+
+                        <input type="number"
+                            id="productOldPrice"
+                            class="form-control"
+                            placeholder="Old price">
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label fw-bold">
+                            Stock
+                        </label>
+
+                        <input type="number"
+                            id="productStock"
+                            class="form-control"
+                            placeholder="Stock quantity">
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label fw-bold">
+                            Image URL
+                        </label>
+
+                        <input type="text"
+                            id="productImage"
+                            class="form-control"
+                            placeholder="Enter image URL">
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="col-12">
+
+                        <label class="form-label fw-bold">
+                            Description
+                        </label>
+
+                        <textarea id="productDescription"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Enter product description">
+                        </textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Cancel
+
+                </button>
+
+                <button type="button"
+                    class="btn btn-primary"
+                    onclick="saveProduct()"
+                    id="saveProductButton">
+
+                    <i class="bi bi-check-circle"></i>
+                    Add Product
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+    /* ================= ADMIN LOGIN CHECK ================= */
+
+    if (
+        localStorage.getItem("electroMartAdminLoggedIn")
+        !== "true"
+    ) {
+
+        window.location.href =
+            "admin-login.html";
+
+    }
+
+
+    /* ================= PRODUCTS ================= */
+
+    let adminProducts =
+        JSON.parse(
+            localStorage.getItem(
+                "electroMartProducts"
+            )
+        ) || products;
+
+
+    let editingProductId = null;
+
+
+    /* ================= DASHBOARD ================= */
+
+    function updateDashboard() {
+
+        document.getElementById(
+            "totalProducts"
+        ).innerText =
+            adminProducts.length;
+
+
+        const orders =
+            JSON.parse(
+                localStorage.getItem(
+                    "electroMartOrders"
+                )
+            ) || [];
+
+
+        document.getElementById(
+            "totalOrders"
+        ).innerText =
+            orders.length;
+
+
+        const customers =
+            JSON.parse(
+                localStorage.getItem(
+                    "electroMartUsers"
+                )
+            ) || [];
+
+
+        document.getElementById(
+            "totalCustomers"
+        ).innerText =
+            customers.length;
+
+
+        let totalSales = 0;
+
+
+        orders.forEach(order => {
+
+            totalSales +=
+                Number(order.total) || 0;
+
+        });
+
+
+        document.getElementById(
+            "totalSales"
+        ).innerText =
+            "₹" +
+            totalSales.toLocaleString("en-IN");
+
+    }
+
+
+    /* ================= DISPLAY PRODUCTS ================= */
+
+    function displayAdminProducts(productList) {
+
+        const tableBody =
+            document.getElementById(
+                "productTableBody"
+            );
+
+
+        tableBody.innerHTML = "";
+
+
+        if (productList.length === 0) {
+
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="8"
+                        class="text-center text-muted py-4">
+
+                        No products found.
+
+                    </td>
+                </tr>
+            `;
+
+            return;
+
+        }
+
+
+        productList.forEach(product => {
+
+            tableBody.innerHTML += `
+
+                <tr>
+
+                    <td>
+                        ${product.id}
+                    </td>
+
+
+                    <td>
+
+                        <img src="${product.image}"
+                            width="60"
+                            height="60"
+                            class="rounded"
+                            style="object-fit:cover">
+
+                    </td>
+
+
+                    <td class="fw-semibold">
+
+                        ${product.name}
+
+                    </td>
+
+
+                    <td>
+
+                        ${product.category}
+
+                    </td>
+
+
+                    <td>
+
+                        ${product.brand}
+
+                    </td>
+
+
+                    <td>
+
+                        ₹${Number(product.price)
+                            .toLocaleString("en-IN")}
+
+                    </td>
+
+
+                    <td>
+
+                        <span class="badge
+                            ${product.stock > 0
+                                ? "bg-success"
+                                : "bg-danger"}">
+
+                            ${product.stock}
+
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+                        <div class="d-flex gap-1">
+
+                            <button
+                                class="btn btn-sm btn-warning"
+                                onclick="editProduct(${product.id})">
+
+                                <i class="bi bi-pencil"></i>
+
+                            </button>
+
+
+                            <button
+                                class="btn btn-sm btn-info text-white"
+                                onclick="viewProduct(${product.id})">
+
+                                <i class="bi bi-eye"></i>
+
+                            </button>
+
+
+                            <button
+                                class="btn btn-sm btn-danger"
+                                onclick="deleteProduct(${product.id})">
+
+                                <i class="bi bi-trash"></i>
+
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+    }
+
+
+    /* ================= SEARCH ================= */
+
+    function searchAdminProducts() {
+
+        const search =
+            document.getElementById(
+                "adminProductSearch"
+            ).value
+            .toLowerCase()
+            .trim();
+
+
+        const filtered =
+            adminProducts.filter(product =>
+
+                product.name
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                product.category
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                product.brand
+                    .toLowerCase()
+                    .includes(search)
+
+            );
+
+
+        displayAdminProducts(filtered);
+
+    }
+
+
+    /* ================= PREPARE ADD ================= */
+
+    function prepareAddProduct() {
+
+        editingProductId = null;
+
+        document.getElementById(
+            "editingProductId"
+        ).value = "";
+
+
+        document.getElementById(
+            "productModalTitle"
+        ).innerHTML = `
+
+            <i class="bi bi-plus-circle"></i>
+            Add Product
+
+        `;
+
+
+        document.getElementById(
+            "saveProductButton"
+        ).innerHTML = `
+
+            <i class="bi bi-check-circle"></i>
+            Add Product
+
+        `;
+
+
+        clearProductForm();
+
+    }
+
+
+    /* ================= CLEAR FORM ================= */
+
+    function clearProductForm() {
+
+        document.getElementById(
+            "productName"
+        ).value = "";
+
+
+        document.getElementById(
+            "productCategory"
+        ).value = "";
+
+
+        document.getElementById(
+            "productBrand"
+        ).value = "";
+
+
+        document.getElementById(
+            "productPrice"
+        ).value = "";
+
+
+        document.getElementById(
+            "productOldPrice"
+        ).value = "";
+
+
+        document.getElementById(
+            "productStock"
+        ).value = "";
+
+
+        document.getElementById(
+            "productImage"
+        ).value = "";
+
+
+        document.getElementById(
+            "productDescription"
+        ).value = "";
+
+    }
+
+
+    /* ================= EDIT PRODUCT ================= */
+
+    function editProduct(productId) {
+
+        const product =
+            adminProducts.find(
+                item =>
+                    Number(item.id) ===
+                    Number(productId)
+            );
+
+
+        if (!product) {
+
+            alert("Product not found.");
+
+            return;
+
+        }
+
+
+        editingProductId =
+            Number(productId);
+
+
+        document.getElementById(
+            "editingProductId"
+        ).value =
+            product.id;
+
+
+        document.getElementById(
+            "productName"
+        ).value =
+            product.name;
+
+
+        document.getElementById(
+            "productCategory"
+        ).value =
+            product.category;
+
+
+        document.getElementById(
+            "productBrand"
+        ).value =
+            product.brand;
+
+
+        document.getElementById(
+            "productPrice"
+        ).value =
+            product.price;
+
+
+        document.getElementById(
+            "productOldPrice"
+        ).value =
+            product.oldPrice;
+
+
+        document.getElementById(
+            "productStock"
+        ).value =
+            product.stock;
+
+
+        document.getElementById(
+            "productImage"
+        ).value =
+            product.image;
+
+
+        document.getElementById(
+            "productDescription"
+        ).value =
+            product.description;
+
+
+        document.getElementById(
+            "productModalTitle"
+        ).innerHTML = `
+
+            <i class="bi bi-pencil-square"></i>
+            Edit Product
+
+        `;
+
+
+        document.getElementById(
+            "saveProductButton"
+        ).innerHTML = `
+
+            <i class="bi bi-check-circle"></i>
+            Update Product
+
+        `;
+
+
+        const modal =
+            new bootstrap.Modal(
+                document.getElementById(
+                    "addProductModal"
+                )
+            );
+
+
+        modal.show();
+
+    }
+
+
+    /* ================= SAVE / UPDATE PRODUCT ================= */
+
+    function saveProduct() {
+
+        const name =
+            document.getElementById(
+                "productName"
+            ).value.trim();
+
+
+        const category =
+            document.getElementById(
+                "productCategory"
+            ).value;
+
+
+        const brand =
+            document.getElementById(
+                "productBrand"
+            ).value.trim();
+
+
+        const price =
+            Number(
+                document.getElementById(
+                    "productPrice"
+                ).value
+            );
+
+
+        const oldPrice =
+            Number(
+                document.getElementById(
+                    "productOldPrice"
+                ).value
+            );
+
+
+        const stock =
+            Number(
+                document.getElementById(
+                    "productStock"
+                ).value
+            );
+
+
+        const image =
+            document.getElementById(
+                "productImage"
+            ).value.trim();
+
+
+        const description =
+            document.getElementById(
+                "productDescription"
+            ).value.trim();
+
+
+        /* VALIDATION */
+
+        if (
+            !name ||
+            !category ||
+            !brand ||
+            !price ||
+            !oldPrice ||
+            stock < 0 ||
+            !image ||
+            !description
+        ) {
+
+            alert(
+                "Please fill all product details."
+            );
+
+            return;
+
+        }
+
+
+        /* DISCOUNT */
+
+        let discount = 0;
+
+
+        if (oldPrice > price) {
+
+            discount =
+                Math.round(
+                    ((oldPrice - price) /
+                        oldPrice) * 100
+                );
+
+        }
+
+
+        /* ================= EDIT ================= */
+
+        if (editingProductId !== null) {
+
+            const productIndex =
+                adminProducts.findIndex(
+                    product =>
+                        Number(product.id) ===
+                        Number(editingProductId)
+                );
+
+
+            if (productIndex !== -1) {
+
+                adminProducts[
+                    productIndex
+                ] = {
+
+                    ...adminProducts[
+                        productIndex
+                    ],
+
+                    name: name,
+                    category: category,
+                    brand: brand,
+                    price: price,
+                    oldPrice: oldPrice,
+                    discount: discount,
+                    stock: stock,
+                    image: image,
+                    description: description
+
+                };
+
+
+                localStorage.setItem(
+                    "electroMartProducts",
+                    JSON.stringify(
+                        adminProducts
+                    )
+                );
+
+
+                alert(
+                    "Product updated successfully!"
+                );
+
+            }
+
+        }
+
+
+        /* ================= ADD ================= */
+
+        else {
+
+            let newId = 1;
+
+
+            if (adminProducts.length > 0) {
+
+                newId =
+                    Math.max(
+                        ...adminProducts.map(
+                            product =>
+                                Number(product.id)
+                        )
+                    ) + 1;
+
+            }
+
+
+            const newProduct = {
+
+                id: newId,
+
+                name: name,
+
+                category: category,
+
+                brand: brand,
+
+                price: price,
+
+                oldPrice: oldPrice,
+
+                discount: discount,
+
+                rating: 4.5,
+
+                reviews: 0,
+
+                stock: stock,
+
+                image: image,
+
+                description: description,
+
+                features: {
+
+                    processor: "N/A",
+                    ram: "N/A",
+                    storage: "N/A",
+                    camera: "N/A"
+
+                }
+
+            };
+
+
+            adminProducts.push(
+                newProduct
+            );
+
+
+            localStorage.setItem(
+                "electroMartProducts",
+                JSON.stringify(
+                    adminProducts
+                )
+            );
+
+
+            alert(
+                "Product added successfully!"
+            );
+
+        }
+
+
+        displayAdminProducts(
+            adminProducts
+        );
+
+
+        updateDashboard();
+
+
+        const modalElement =
+            document.getElementById(
+                "addProductModal"
+            );
+
+
+        const modal =
+            bootstrap.Modal.getInstance(
+                modalElement
+            );
+
+
+        if (modal) {
+
+            modal.hide();
+
+        }
+
+
+        editingProductId = null;
+
+    }
+
+
+    /* ================= DELETE PRODUCT ================= */
+
+    function deleteProduct(productId) {
+
+        const product =
+            adminProducts.find(
+                item =>
+                    Number(item.id) ===
+                    Number(productId)
+            );
+
+
+        if (!product) {
+
+            return;
+
+        }
+
+
+        const confirmDelete =
+            confirm(
+                `Are you sure you want to delete "${product.name}"?`
+            );
+
+
+        if (!confirmDelete) {
+
+            return;
+
+        }
+
+
+        adminProducts =
+            adminProducts.filter(
+                item =>
+                    Number(item.id) !==
+                    Number(productId)
+            );
+
+
+        localStorage.setItem(
+            "electroMartProducts",
+            JSON.stringify(
+                adminProducts
+            )
+        );
+
+
+        displayAdminProducts(
+            adminProducts
+        );
+
+
+        updateDashboard();
+
+
+        alert(
+            "Product deleted successfully!"
+        );
+
+    }
+
+
+    /* ================= VIEW PRODUCT ================= */
+
+    function viewProduct(productId) {
+
+        window.location.href =
+            "product-details.html?id=" +
+            productId;
+
+    }
+
+
+    /* ================= ORDERS ================= */
+
+    function showOrders() {
+
+        const section =
+            document.getElementById(
+                "ordersSection"
+            );
+
+
+        section.style.display =
+            section.style.display === "none"
+                ? "block"
+                : "none";
+
+
+        const orders =
+            JSON.parse(
+                localStorage.getItem(
+                    "electroMartOrders"
+                )
+            ) || [];
+
+
+        const tableBody =
+            document.getElementById(
+                "ordersTableBody"
+            );
+
+
+        tableBody.innerHTML = "";
+
+
+        if (orders.length === 0) {
+
+            tableBody.innerHTML = `
+
+                <tr>
+
+                    <td colspan="4"
+                        class="text-center text-muted">
+
+                        No orders found.
+
+                    </td>
+
+                </tr>
+
+            `;
+
+            return;
+
+        }
+
+
+        orders.forEach(order => {
+
+            tableBody.innerHTML += `
+
+                <tr>
+
+                    <td>
+                        ${order.id || "-"}
+                    </td>
+
+                    <td>
+                        ${order.customerName || "-"}
+                    </td>
+
+                    <td>
+                        ₹${Number(order.total || 0)
+                            .toLocaleString("en-IN")}
+                    </td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            ${order.status || "Confirmed"}
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+    }
+
+
+    /* ================= CUSTOMERS ================= */
+
+    function showCustomers() {
+
+        const section =
+            document.getElementById(
+                "customersSection"
+            );
+
+
+        section.style.display =
+            section.style.display === "none"
+                ? "block"
+                : "none";
+
+
+        const customers =
+            JSON.parse(
+                localStorage.getItem(
+                    "electroMartUsers"
+                )
+            ) || [];
+
+
+        const tableBody =
+            document.getElementById(
+                "customersTableBody"
+            );
+
+
+        tableBody.innerHTML = "";
+
+
+        if (customers.length === 0) {
+
+            tableBody.innerHTML = `
+
+                <tr>
+
+                    <td colspan="3"
+                        class="text-center text-muted">
+
+                        No customers found.
+
+                    </td>
+
+                </tr>
+
+            `;
+
+            return;
+
+        }
+
+
+        customers.forEach(customer => {
+
+            tableBody.innerHTML += `
+
+                <tr>
+
+                    <td>
+                        ${customer.name || "-"}
+                    </td>
+
+                    <td>
+                        ${customer.email || "-"}
+                    </td>
+
+                    <td>
+                        ${customer.phone || "-"}
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+    }
+
+
+    /* ================= LOGOUT ================= */
+
+    function adminLogout() {
+
+        const confirmLogout =
+            confirm(
+                "Do you want to logout from Admin?"
+            );
+
+
+        if (!confirmLogout) {
+
+            return;
+
+        }
+
+
+        localStorage.removeItem(
+            "electroMartAdminLoggedIn"
+        );
+
+
+        window.location.href =
+            "admin-login.html";
+
+    }
+
+
+    /* ================= PAGE LOAD ================= */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            displayAdminProducts(
+                adminProducts
+            );
+
+            updateDashboard();
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
+```

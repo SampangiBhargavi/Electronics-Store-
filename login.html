@@ -1,0 +1,867 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - ElectroMart</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body class="login-page">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg login-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand text-white fw-bold fs-4" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i>
+            ElectroMart
+        </a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#loginNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="loginNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="categories.html">
+                        Categories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="brands.html">
+                        Brands
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="deals.html">
+                        Deals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="new-arrivals.html">
+                        New Arrivals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <a href="wishlist.html"
+                   class="btn btn-outline-light">
+
+                    <i class="bi bi-heart"></i>
+
+                </a>
+
+                <a href="cart.html"
+                   class="btn btn-outline-light">
+
+                    <i class="bi bi-cart3"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= LOGIN SECTION ================= -->
+
+<section class="login-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center align-items-center g-0">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="col-lg-5">
+
+                <div class="login-welcome">
+
+                    <div class="login-welcome-icon">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+
+                    <span class="login-small-title">
+                        WELCOME TO ELECTROMART
+                    </span>
+
+                    <h1>
+                        Your Favourite Electronics,
+                        All in One Place.
+                    </h1>
+
+                    <p>
+                        Sign in to access your wishlist, orders,
+                        saved products and exclusive offers.
+                    </p>
+
+
+                    <div class="login-benefits">
+
+                        <div class="login-benefit">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Track your orders easily
+                            </span>
+
+                        </div>
+
+                        <div class="login-benefit">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Save your favourite products
+                            </span>
+
+                        </div>
+
+                        <div class="login-benefit">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Get exclusive deals and offers
+                            </span>
+
+                        </div>
+
+                        <div class="login-benefit">
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Faster and easier checkout
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="col-lg-5">
+
+                <div class="login-card">
+
+                    <!-- LOGIN FORM -->
+
+                    <div id="loginForm">
+
+                        <div class="login-card-heading">
+
+                            <h2>Welcome Back!</h2>
+
+                            <p>
+                                Login to your ElectroMart account
+                            </p>
+
+                        </div>
+
+
+                        <form onsubmit="loginUser(event)">
+
+                            <div class="login-input-group">
+
+                                <label for="loginEmail">
+                                    Email Address
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input type="email"
+                                           id="loginEmail"
+                                           class="form-control"
+                                           placeholder="Enter your email"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-input-group">
+
+                                <label for="loginPassword">
+                                    Password
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-lock"></i>
+
+                                    <input type="password"
+                                           id="loginPassword"
+                                           class="form-control"
+                                           placeholder="Enter your password"
+                                           required>
+
+                                    <button type="button"
+                                            class="password-toggle"
+                                            onclick="togglePassword('loginPassword', this)">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-options">
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           id="rememberMe">
+
+                                    <label class="form-check-label"
+                                           for="rememberMe">
+
+                                        Remember me
+
+                                    </label>
+
+                                </div>
+
+                                <a href="#"
+                                   onclick="showForgotPassword(event)">
+
+                                    Forgot Password?
+
+                                </a>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    class="btn login-submit-btn">
+
+                                Login
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <div class="login-divider">
+
+                            <span>OR CONTINUE WITH</span>
+
+                        </div>
+
+
+                        <div class="social-login-buttons">
+
+                            <button class="btn social-login-btn"
+                                    onclick="socialLogin('Google')">
+
+                                <i class="bi bi-google"></i>
+                                Google
+
+                            </button>
+
+                            <button class="btn social-login-btn"
+                                    onclick="socialLogin('Facebook')">
+
+                                <i class="bi bi-facebook"></i>
+                                Facebook
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="login-register-text">
+
+                            Don't have an account?
+
+                            <a href="#"
+                               onclick="showRegister(event)">
+                                Create Account
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REGISTER FORM -->
+
+                    <div id="registerForm" style="display: none;">
+
+                        <div class="login-card-heading">
+
+                            <h2>Create Account</h2>
+
+                            <p>
+                                Join ElectroMart today
+                            </p>
+
+                        </div>
+
+
+                        <form onsubmit="registerUser(event)">
+
+                            <div class="login-input-group">
+
+                                <label for="registerName">
+                                    Full Name
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <input type="text"
+                                           id="registerName"
+                                           class="form-control"
+                                           placeholder="Enter your name"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-input-group">
+
+                                <label for="registerEmail">
+                                    Email Address
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input type="email"
+                                           id="registerEmail"
+                                           class="form-control"
+                                           placeholder="Enter your email"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-input-group">
+
+                                <label for="registerPassword">
+                                    Password
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-lock"></i>
+
+                                    <input type="password"
+                                           id="registerPassword"
+                                           class="form-control"
+                                           placeholder="Create a password"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-input-group">
+
+                                <label for="confirmPassword">
+                                    Confirm Password
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-shield-lock"></i>
+
+                                    <input type="password"
+                                           id="confirmPassword"
+                                           class="form-control"
+                                           placeholder="Confirm your password"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-check register-check">
+
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       id="terms"
+                                       required>
+
+                                <label class="form-check-label"
+                                       for="terms">
+
+                                    I agree to the Terms & Conditions
+
+                                </label>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    class="btn login-submit-btn">
+
+                                Create Account
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <div class="login-register-text">
+
+                            Already have an account?
+
+                            <a href="#"
+                               onclick="showLogin(event)">
+                                Login
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORGOT PASSWORD -->
+
+                    <div id="forgotForm" style="display: none;">
+
+                        <div class="login-card-heading">
+
+                            <div class="forgot-icon">
+                                <i class="bi bi-key"></i>
+                            </div>
+
+                            <h2>Forgot Password?</h2>
+
+                            <p>
+                                Enter your email and we'll send you
+                                a password reset link.
+                            </p>
+
+                        </div>
+
+
+                        <form onsubmit="resetPassword(event)">
+
+                            <div class="login-input-group">
+
+                                <label for="forgotEmail">
+                                    Email Address
+                                </label>
+
+                                <div class="login-input">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input type="email"
+                                           id="forgotEmail"
+                                           class="form-control"
+                                           placeholder="Enter your email"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    class="btn login-submit-btn">
+
+                                Send Reset Link
+                                <i class="bi bi-send"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <div class="login-register-text">
+
+                            Remember your password?
+
+                            <a href="#"
+                               onclick="showLogin(event)">
+                                Back to Login
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SECURITY INFO ================= -->
+
+<section class="login-security-section">
+
+    <div class="container">
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+
+                <div class="login-security-box">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <div>
+
+                        <h4>Secure Login</h4>
+
+                        <p>
+                            Your account information is protected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="login-security-box">
+
+                    <i class="bi bi-lock"></i>
+
+                    <div>
+
+                        <h4>Safe Payments</h4>
+
+                        <p>
+                            Secure payment options for every order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="login-security-box">
+
+                    <i class="bi bi-headset"></i>
+
+                    <div>
+
+                        <h4>24/7 Support</h4>
+
+                        <p>
+                            We're always here to help you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="login-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <h4>
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    ElectroMart
+                </h4>
+
+                <p>
+                    Your trusted destination for smartphones,
+                    laptops, audio devices, cameras and more.
+                </p>
+
+                <div class="login-social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Quick Links</h5>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="deals.html">Deals</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>My Account</h5>
+
+                <a href="orders.html">My Orders</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>Contact</h5>
+
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    Hyderabad, Telangana
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    support@electromart.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <div class="text-center">
+
+            <p class="mb-0">
+                © 2026 ElectroMart. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function showRegister(event) {
+
+    event.preventDefault();
+
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("forgotForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+
+}
+
+
+function showLogin(event) {
+
+    event.preventDefault();
+
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("forgotForm").style.display = "none";
+    document.getElementById("loginForm").style.display = "block";
+
+}
+
+
+function showForgotPassword(event) {
+
+    event.preventDefault();
+
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("forgotForm").style.display = "block";
+
+}
+
+
+function togglePassword(inputId, button) {
+
+    const input = document.getElementById(inputId);
+    const icon = button.querySelector("i");
+
+    if (input.type === "password") {
+
+        input.type = "text";
+        icon.classList.remove("bi-eye");
+        icon.classList.add("bi-eye-slash");
+
+    } else {
+
+        input.type = "password";
+        icon.classList.remove("bi-eye-slash");
+        icon.classList.add("bi-eye");
+
+    }
+
+}
+
+
+function loginUser(event) {
+
+    event.preventDefault();
+
+    alert("Login successful! Backend authentication will be connected later.");
+
+}
+
+
+function registerUser(event) {
+
+    event.preventDefault();
+
+    const password = document.getElementById("registerPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match.");
+        return;
+
+    }
+
+    alert("Account created successfully!");
+
+    showLogin(event);
+
+}
+
+
+function resetPassword(event) {
+
+    event.preventDefault();
+
+    alert("Password reset link has been sent to your email.");
+
+}
+
+
+function socialLogin(provider) {
+
+    alert(provider + " login will be connected later.");
+
+}
+
+</script>
+
+</body>
+</html>
+```

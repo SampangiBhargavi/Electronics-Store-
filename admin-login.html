@@ -1,0 +1,312 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - ElectroMart</title>
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body class="bg-light">
+
+
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+<div class="container">
+
+    <div class="row justify-content-center align-items-center"
+         style="min-height:100vh;">
+
+        <div class="col-md-5 col-lg-4">
+
+
+            <div class="card border-0 shadow-lg">
+
+
+                <!-- HEADER -->
+
+                <div class="card-header bg-primary text-white text-center py-4">
+
+                    <div class="fs-1">
+
+                        <i class="bi bi-lightning-charge-fill"></i>
+
+                    </div>
+
+
+                    <h3 class="fw-bold mb-1">
+
+                        ElectroMart
+
+                    </h3>
+
+
+                    <p class="mb-0">
+
+                        Admin Login
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- BODY -->
+
+                <div class="card-body p-4">
+
+
+                    <div id="loginMessage"></div>
+
+
+                    <form id="adminLoginForm">
+
+
+                        <!-- USERNAME -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label fw-semibold">
+
+                                Username
+
+                            </label>
+
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-person"></i>
+
+                                </span>
+
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="adminUsername"
+                                       placeholder="Enter username"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label fw-semibold">
+
+                                Password
+
+                            </label>
+
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-lock"></i>
+
+                                </span>
+
+
+                                <input type="password"
+                                       class="form-control"
+                                       id="adminPassword"
+                                       placeholder="Enter password"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- LOGIN -->
+
+                        <button type="submit"
+                                class="btn btn-primary w-100 py-2">
+
+                            <i class="bi bi-box-arrow-in-right"></i>
+
+                            Login as Admin
+
+                        </button>
+
+
+                    </form>
+
+
+                    <hr>
+
+
+                    <!-- BACK TO STORE -->
+
+                    <div class="text-center">
+
+                        <a href="index.html"
+                           class="text-decoration-none">
+
+                            <i class="bi bi-arrow-left"></i>
+
+                            Back to Store
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- DEMO LOGIN -->
+
+            <div class="text-center mt-3">
+
+                <small class="text-muted">
+
+                    Demo Admin Login:
+
+                    <strong>admin</strong> /
+
+                    <strong>admin123</strong>
+
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
+
+<script>
+
+
+// =====================================================
+// ADMIN LOGIN
+// =====================================================
+
+document
+    .getElementById("adminLoginForm")
+    .addEventListener("submit", function(event) {
+
+
+        event.preventDefault();
+
+
+        const username =
+            document
+                .getElementById("adminUsername")
+                .value
+                .trim();
+
+
+        const password =
+            document
+                .getElementById("adminPassword")
+                .value;
+
+
+        const message =
+            document.getElementById("loginMessage");
+
+
+        // DEMO ADMIN CREDENTIALS
+
+        const correctUsername = "admin";
+
+        const correctPassword = "admin123";
+
+
+        if (
+            username === correctUsername &&
+            password === correctPassword
+        ) {
+
+
+            // SAVE ADMIN LOGIN
+
+            localStorage.setItem(
+                "electroMartAdminLoggedIn",
+                "true"
+            );
+
+
+            message.innerHTML = `
+
+                <div class="alert alert-success">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Login successful!
+
+                </div>
+
+            `;
+
+
+            setTimeout(function() {
+
+                window.location.href =
+                    "admin.html";
+
+            }, 500);
+
+
+        } else {
+
+
+            message.innerHTML = `
+
+                <div class="alert alert-danger">
+
+                    <i class="bi bi-exclamation-circle"></i>
+
+                    Invalid username or password.
+
+                </div>
+
+            `;
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
+```

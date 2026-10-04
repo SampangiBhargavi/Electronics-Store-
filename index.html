@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ElectroMart | Electronics Store</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shop-navbar">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-lightning-charge-fill me-2"></i>ElectroMart
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+                <li class="nav-item"><a class="nav-link" href="deals.html">Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="wishlist.html" class="nav-icon" aria-label="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" aria-label="Shopping cart">
+                    <i class="bi bi-bag"></i>
+                </a>
+                <a href="login.html" class="btn login-btn">Login</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- SEARCH BAR -->
+<div class="search-section">
+    <div class="container">
+        <div class="search-row">
+
+            <a href="index.html" class="store-location">
+                <i class="bi bi-geo-alt"></i>
+                <span>Explore<br><strong>Electronics</strong></span>
+            </a>
+
+            <form class="search-box" action="shop.html">
+                <input type="search" name="search"
+                       placeholder="Search mobiles, laptops, headphones..."
+                       aria-label="Search products">
+                <button type="submit" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+
+            <div class="support-info">
+                <i class="bi bi-headset"></i>
+                <span>Need help?<br><strong>Customer Support</strong></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- CATEGORY STRIP -->
+<div class="category-strip">
+    <div class="container">
+        <div class="category-links">
+            <a href="categories.html"><i class="bi bi-grid"></i> All Categories</a>
+            <a href="shop.html">Mobiles</a>
+            <a href="shop.html">Laptops</a>
+            <a href="shop.html">Audio</a>
+            <a href="shop.html">Smart Watches</a>
+            <a href="shop.html">Cameras</a>
+            <a href="shop.html">Accessories</a>
+            <a href="deals.html" class="hot-deal">
+                <i class="bi bi-fire"></i> Hot Deals
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-banner">
+
+            <div class="hero-content">
+                <span class="hero-label">
+                    <i class="bi bi-stars me-1"></i> SMART TECH. SMART CHOICE.
+                </span>
+
+                <h1>Upgrade Your<br>
+                    World With <span>Technology.</span>
+                </h1>
+
+                <p>
+                    Discover the latest smartphones, laptops and gadgets
+                    at prices you'll love.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn primary-btn">
+                        Shop Now <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <a href="deals.html" class="btn secondary-btn">
+                        Explore Deals
+                    </a>
+                </div>
+
+                <div class="hero-points">
+                    <span><i class="bi bi-check-circle-fill"></i> Genuine Products</span>
+                    <span><i class="bi bi-check-circle-fill"></i> Secure Shopping</span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern electronic gadgets">
+                <div class="floating-offer">
+                    <span>Special Offer</span>
+                    <strong>Up to 30% OFF</strong>
+                    <small>On selected gadgets</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="row g-3">
+
+            <div class="col-6 col-lg-3">
+                <div class="benefit-item">
+                    <i class="bi bi-truck"></i>
+                    <div><h6>Free Delivery</h6><p>On eligible orders</p></div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="benefit-item">
+                    <i class="bi bi-shield-check"></i>
+                    <div><h6>Secure Payments</h6><p>Shop with confidence</p></div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="benefit-item">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <div><h6>Easy Returns</h6><p>Simple return process</p></div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="benefit-item">
+                    <i class="bi bi-headset"></i>
+                    <div><h6>Customer Support</h6><p>We're here to help</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">EXPLORE OUR STORE</span>
+                <h2>Shop by <span>Category</span></h2>
+                <p>Find the right technology for your everyday needs.</p>
+            </div>
+            <a href="categories.html" class="view-link">
+                View All <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80" alt="Smartphones">
+                    </div>
+                    <h6>Mobiles</h6>
+                    <p>Latest smartphones</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=80" alt="Laptops">
+                    </div>
+                    <h6>Laptops</h6>
+                    <p>Work and gaming</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Headphones">
+                    </div>
+                    <h6>Audio</h6>
+                    <p>Hear every detail</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Smartwatch">
+                    </div>
+                    <h6>Smart Watches</h6>
+                    <p>Smart living</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80" alt="Camera">
+                    </div>
+                    <h6>Cameras</h6>
+                    <p>Capture moments</p>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="shop.html" class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80" alt="Electronics accessories">
+                    </div>
+                    <h6>Accessories</h6>
+                    <p>Everyday essentials</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURED PRODUCTS -->
+<section class="section products-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">HANDPICKED FOR YOU</span>
+                <h2>Featured <span>Products</span></h2>
+                <p>Discover popular gadgets picked for you.</p>
+            </div>
+            <a href="shop.html" class="view-link">
+                View All Products <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <span class="product-badge">Popular</span>
+                    <button class="wishlist-btn" aria-label="Add smartphone to wishlist">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                    <a href="product-details.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Smartphone">
+                    </a>
+                    <div class="product-content">
+                        <small>SMARTPHONES</small>
+                        <h5><a href="product-details.html">Smartphone Pro</a></h5>
+                        <div class="rating"><i class="bi bi-star-fill"></i> 4.8 <span>(120 reviews)</span></div>
+                        <div class="price-row"><strong>₹49,999</strong><del>₹59,999</del></div>
+                        <a href="cart.html" class="btn add-cart-btn">
+                            <i class="bi bi-bag-plus me-2"></i>Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <span class="product-badge sale-badge">-15%</span>
+                    <button class="wishlist-btn" aria-label="Add laptop to wishlist">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                    <a href="product-details.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="Laptop">
+                    </a>
+                    <div class="product-content">
+                        <small>LAPTOPS</small>
+                        <h5><a href="product-details.html">UltraBook Air</a></h5>
+                        <div class="rating"><i class="bi bi-star-fill"></i> 4.7 <span>(86 reviews)</span></div>
+                        <div class="price-row"><strong>₹64,999</strong><del>₹76,999</del></div>
+                        <a href="cart.html" class="btn add-cart-btn">
+                            <i class="bi bi-bag-plus me-2"></i>Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <span class="product-badge">Bestseller</span>
+                    <button class="wishlist-btn" aria-label="Add headphones to wishlist">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                    <a href="product-details.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Wireless headphones">
+                    </a>
+                    <div class="product-content">
+                        <small>AUDIO</small>
+                        <h5><a href="product-details.html">Wireless Headphones</a></h5>
+                        <div class="rating"><i class="bi bi-star-fill"></i> 4.6 <span>(94 reviews)</span></div>
+                        <div class="price-row"><strong>₹2,999</strong><del>₹3,999</del></div>
+                        <a href="cart.html" class="btn add-cart-btn">
+                            <i class="bi bi-bag-plus me-2"></i>Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <span class="product-badge sale-badge">-20%</span>
+                    <button class="wishlist-btn" aria-label="Add smartwatch to wishlist">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                    <a href="product-details.html" class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smartwatch">
+                    </a>
+                    <div class="product-content">
+                        <small>SMART WATCHES</small>
+                        <h5><a href="product-details.html">Smart Watch Series</a></h5>
+                        <div class="rating"><i class="bi bi-star-fill"></i> 4.5 <span>(72 reviews)</span></div>
+                        <div class="price-row"><strong>₹3,999</strong><del>₹4,999</del></div>
+                        <a href="cart.html" class="btn add-cart-btn">
+                            <i class="bi bi-bag-plus me-2"></i>Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- DEALS BANNER -->
+<section class="deals-section">
+    <div class="container">
+        <div class="deals-banner">
+
+            <div>
+                <span class="deals-label">LIMITED-TIME OFFERS</span>
+                <h2>Big Deals. Better Technology.</h2>
+                <p>Explore special offers on selected electronics and accessories.</p>
+                <a href="deals.html" class="btn deals-btn">
+                    Explore All Deals <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+            <div class="deals-icon">
+                <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- POPULAR BRANDS -->
+<section class="section brands-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">SHOP YOUR FAVOURITES</span>
+                <h2>Popular <span>Brands</span></h2>
+                <p>Explore products from well-known technology brands.</p>
+            </div>
+            <a href="brands.html" class="view-link">
+                All Brands <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-4 col-lg">
+                <a href="brands.html" class="brand-card">
+                    <i class="bi bi-apple"></i>
+                    <span>Apple</span>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <a href="brands.html" class="brand-card">
+                    <i class="bi bi-phone"></i>
+                    <span>Samsung</span>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <a href="brands.html" class="brand-card">
+                    <i class="bi bi-headphones"></i>
+                    <span>Sony</span>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <a href="brands.html" class="brand-card">
+                    <i class="bi bi-laptop"></i>
+                    <span>HP</span>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <a href="brands.html" class="brand-card">
+                    <i class="bi bi-pc-display"></i>
+                    <span>Dell</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-box text-center">
+
+            <i class="bi bi-envelope-paper newsletter-icon"></i>
+            <h2>Stay Updated with ElectroMart</h2>
+            <p>Discover new arrivals, exclusive offers and the latest gadgets.</p>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address"
+                       aria-label="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <small>Stay in the loop. Unsubscribe anytime.</small>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="store-footer">
+    <div class="container">
+
+        <div class="row g-4 py-5">
+
+            <div class="col-lg-4">
+                <a class="footer-brand" href="index.html">
+                    <i class="bi bi-lightning-charge-fill me-2"></i>ElectroMart
+                </a>
+                <p class="footer-description">
+                    Your destination for the latest electronics, smart gadgets
+                    and everyday technology essentials.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h6>Quick Links</h6>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="brands.html">Our Brands</a>
+            </div>
+
+            <div class="col-6 col-lg-2">
+                <h6>Customer Care</h6>
+                <a href="contact.html">Contact Us</a>
+                <a href="orders.html">My Orders</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+
+            <div class="col-lg-4">
+                <h6>Contact Information</h6>
+                <p><i class="bi bi-geo-alt me-2"></i>Hyderabad, Telangana, India</p>
+                <p><i class="bi bi-envelope me-2"></i>support@electromart.example</p>
+                <p><i class="bi bi-clock me-2"></i>Customer support: Mon–Sat</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ElectroMart. All rights reserved.</p>
+            <p>Designed with <i class="bi bi-heart-fill"></i> for technology lovers.</p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

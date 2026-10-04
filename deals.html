@@ -1,0 +1,724 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deals & Offers | ElectroMart</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark shop-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i>
+            ElectroMart
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="brands.html">Brands</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="deals.html">Deals</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 nav-actions">
+
+                <a href="wishlist.html" class="nav-icon">
+                    <i class="bi bi-heart"></i>
+                </a>
+
+                <a href="cart.html" class="nav-icon">
+                    <i class="bi bi-cart3"></i>
+                </a>
+
+                <a href="login.html" class="btn login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= DEALS HERO ================= -->
+
+<section class="deals-hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+
+                <span class="deals-small-title">
+                    LIMITED TIME OFFERS
+                </span>
+
+                <h1>
+                    Big Deals.
+                    <br>
+                    <span>Big Savings.</span>
+                </h1>
+
+                <p>
+                    Upgrade your technology without stretching your budget.
+                    Discover exciting discounts on smartphones, laptops,
+                    audio devices, wearables and more.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a href="#deal-products"
+                       class="btn deals-primary-btn">
+
+                        Shop Deals
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                    <a href="shop.html"
+                       class="btn deals-secondary-btn">
+
+                        View All Products
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="deal-highlight-card">
+
+                    <span>
+                        DEAL OF THE DAY
+                    </span>
+
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                    <h2>
+                        Up to 50% OFF
+                    </h2>
+
+                    <p>
+                        On selected electronics
+                    </p>
+
+                    <div class="deal-timer">
+
+                        <div>
+                            <strong>08</strong>
+                            <small>Hours</small>
+                        </div>
+
+                        <div>
+                            <strong>24</strong>
+                            <small>Minutes</small>
+                        </div>
+
+                        <div>
+                            <strong>36</strong>
+                            <small>Seconds</small>
+                        </div>
+
+                    </div>
+
+                    <a href="#deal-products"
+                       class="btn deal-highlight-btn">
+
+                        Grab the Deal
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER CATEGORIES ================= -->
+
+<section class="deal-offers-section">
+
+    <div class="container">
+
+        <div class="text-center deals-heading">
+
+            <span class="section-label">
+                SPECIAL OFFERS
+            </span>
+
+            <h2>
+                Offers For Every Need
+            </h2>
+
+            <p>
+                Choose a deal category and start saving.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="offer-box">
+
+                    <i class="bi bi-phone"></i>
+
+                    <h3>
+                        Smartphones
+                    </h3>
+
+                    <strong>
+                        Up to 40% OFF
+                    </strong>
+
+                    <a href="shop.html">
+                        Shop Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="offer-box">
+
+                    <i class="bi bi-laptop"></i>
+
+                    <h3>
+                        Laptops
+                    </h3>
+
+                    <strong>
+                        Up to 35% OFF
+                    </strong>
+
+                    <a href="shop.html">
+                        Shop Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="offer-box">
+
+                    <i class="bi bi-headphones"></i>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                    <strong>
+                        Up to 50% OFF
+                    </strong>
+
+                    <a href="shop.html">
+                        Shop Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="offer-box">
+
+                    <i class="bi bi-smartwatch"></i>
+
+                    <h3>
+                        Wearables
+                    </h3>
+
+                    <strong>
+                        Up to 30% OFF
+                    </strong>
+
+                    <a href="shop.html">
+                        Shop Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DEAL PRODUCTS ================= -->
+
+<section class="deal-products-section" id="deal-products">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-end mb-4">
+
+            <div>
+
+                <span class="section-label">
+                    HOT DEALS
+                </span>
+
+                <h2 class="deals-products-title">
+                    Today's Best Deals
+                </h2>
+
+            </div>
+
+            <a href="shop.html" class="deal-view-all">
+                View All
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Product 1 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="deal-product-card">
+
+                    <div class="deal-product-image">
+
+                        <span class="deal-discount">
+                            25% OFF
+                        </span>
+
+                        <button class="deal-wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"
+                            alt="Smartphone">
+
+                    </div>
+
+                    <div class="deal-product-content">
+
+                        <span>
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            Smartphone Pro
+                        </h3>
+
+                        <div class="deal-rating">
+                            ★★★★★
+                            <small>(126)</small>
+                        </div>
+
+                        <div class="deal-price">
+
+                            <strong>
+                                ₹44,999
+                            </strong>
+
+                            <del>
+                                ₹59,999
+                            </del>
+
+                        </div>
+
+                        <a href="product-details.html"
+                           class="btn deal-cart-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="deal-product-card">
+
+                    <div class="deal-product-image">
+
+                        <span class="deal-discount">
+                            30% OFF
+                        </span>
+
+                        <button class="deal-wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                            alt="Laptop">
+
+                    </div>
+
+                    <div class="deal-product-content">
+
+                        <span>
+                            Laptop
+                        </span>
+
+                        <h3>
+                            UltraBook Air
+                        </h3>
+
+                        <div class="deal-rating">
+                            ★★★★★
+                            <small>(98)</small>
+                        </div>
+
+                        <div class="deal-price">
+
+                            <strong>
+                                ₹56,999
+                            </strong>
+
+                            <del>
+                                ₹79,999
+                            </del>
+
+                        </div>
+
+                        <a href="product-details.html"
+                           class="btn deal-cart-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="deal-product-card">
+
+                    <div class="deal-product-image">
+
+                        <span class="deal-discount">
+                            35% OFF
+                        </span>
+
+                        <button class="deal-wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                            alt="Wireless headphones">
+
+                    </div>
+
+                    <div class="deal-product-content">
+
+                        <span>
+                            Audio
+                        </span>
+
+                        <h3>
+                            Wireless Headphones
+                        </h3>
+
+                        <div class="deal-rating">
+                            ★★★★★
+                            <small>(89)</small>
+                        </div>
+
+                        <div class="deal-price">
+
+                            <strong>
+                                ₹3,899
+                            </strong>
+
+                            <del>
+                                ₹5,999
+                            </del>
+
+                        </div>
+
+                        <a href="product-details.html"
+                           class="btn deal-cart-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="deal-product-card">
+
+                    <div class="deal-product-image">
+
+                        <span class="deal-discount">
+                            20% OFF
+                        </span>
+
+                        <button class="deal-wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+                            alt="Smartwatch">
+
+                    </div>
+
+                    <div class="deal-product-content">
+
+                        <span>
+                            Wearables
+                        </span>
+
+                        <h3>
+                            Smart Watch Series
+                        </h3>
+
+                        <div class="deal-rating">
+                            ★★★★★
+                            <small>(74)</small>
+                        </div>
+
+                        <div class="deal-price">
+
+                            <strong>
+                                ₹5,499
+                            </strong>
+
+                            <del>
+                                ₹6,999
+                            </del>
+
+                        </div>
+
+                        <a href="product-details.html"
+                           class="btn deal-cart-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROMOTION ================= -->
+
+<section class="deal-promo-section">
+
+    <div class="container">
+
+        <div class="deal-promo">
+
+            <div>
+
+                <span>
+                    EXTRA SAVINGS
+                </span>
+
+                <h2>
+                    Get ₹500 OFF
+                    <br>
+                    on your first order
+                </h2>
+
+                <p>
+                    Use the code
+                    <strong>ELECTRO500</strong>
+                    at checkout.
+                </p>
+
+                <a href="shop.html"
+                   class="btn deal-promo-btn">
+
+                    Start Shopping
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+            <i class="bi bi-ticket-perforated-fill deal-promo-icon"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="store-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+
+                <a href="index.html" class="footer-brand">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    ElectroMart
+                </a>
+
+                <p class="footer-description">
+                    Your destination for electronics,
+                    smart gadgets and everyday technology.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <h5>Quick Links</h5>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="brands.html">Brands</a>
+
+            </div>
+
+
+            <div class="col-6 col-md-4">
+
+                <h5>Customer Service</h5>
+
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ElectroMart. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1456 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | ElectroMart</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark shop-navbar">
+
+    <div class="container">
+
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="bi bi-lightning-charge-fill me-2"></i>
+
+            ElectroMart
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="mainNavbar">
+
+
+            <ul class="navbar-nav mx-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="categories.html">
+                        Categories
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="brands.html">
+                        Brands
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="deals.html">
+                        Deals
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+
+                <a href="wishlist.html"
+                   class="nav-icon">
+
+                    <i class="bi bi-heart"></i>
+
+                </a>
+
+
+                <a href="cart.html"
+                   class="nav-icon">
+
+                    <i class="bi bi-bag"></i>
+
+                </a>
+
+
+                <a href="login.html"
+                   class="btn login-btn">
+
+                    Login
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<section class="product-breadcrumb-section">
+
+    <div class="container">
+
+
+        <div class="product-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span id="breadcrumbProduct">
+                Product
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAILS
+===================================================== -->
+
+<section class="product-details-section">
+
+    <div class="container">
+
+
+        <div class="row g-5">
+
+
+            <!-- =================================================
+                 PRODUCT IMAGE
+            ================================================= -->
+
+            <div class="col-lg-6">
+
+
+                <div class="product-image-box">
+
+
+                    <span class="product-detail-badge"
+                          id="productDiscount">
+
+                        17% OFF
+
+                    </span>
+
+
+                    <button
+                        class="product-detail-wishlist"
+                        onclick="addToWishlist()">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+
+                    <img
+                        id="mainProductImage"
+                        src=""
+                        alt="Product"
+                        class="product-main-image">
+
+
+                </div>
+
+
+                <!-- THUMBNAILS -->
+
+                <div class="product-thumbnails"
+                     id="productThumbnails">
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUCT INFORMATION
+            ================================================= -->
+
+            <div class="col-lg-6">
+
+
+                <span class="product-category-label"
+                      id="productCategory">
+
+                    Category
+
+                </span>
+
+
+                <h1 class="product-detail-title"
+                    id="productName">
+
+                    Product Name
+
+                </h1>
+
+
+                <!-- RATING -->
+
+                <div class="product-detail-rating">
+
+
+                    <span class="text-warning">
+
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+
+                    </span>
+
+
+                    <strong id="productRating">
+                        4.8
+                    </strong>
+
+
+                    <span>
+                        (<span id="productReviews">126</span>
+                        reviews)
+                    </span>
+
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- PRICE -->
+
+                <div class="product-detail-price">
+
+
+                    <span class="current-price"
+                          id="productPrice">
+
+                        ₹49,999
+
+                    </span>
+
+
+                    <span class="old-price"
+                          id="productOldPrice">
+
+                        ₹59,999
+
+                    </span>
+
+
+                    <span class="discount"
+                          id="productDiscountText">
+
+                        17% OFF
+
+                    </span>
+
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <p class="product-detail-description"
+                   id="productDescription">
+
+                    Product description
+
+                </p>
+
+
+
+                <!-- FEATURES -->
+
+                <div class="product-features"
+                     id="productFeatures">
+
+                </div>
+
+
+
+                <!-- COLOR -->
+
+                <div class="product-option">
+
+                    <h6>
+                        Brand
+                    </h6>
+
+                    <span id="productBrand">
+                        Samsung
+                    </span>
+
+                </div>
+
+
+
+                <!-- QUANTITY -->
+
+                <div class="product-option">
+
+
+                    <h6>
+                        Quantity
+                    </h6>
+
+
+                    <div class="quantity-box">
+
+
+                        <button
+                            onclick="decreaseQuantity()">
+
+                            −
+
+                        </button>
+
+
+                        <span id="quantity">
+                            1
+                        </span>
+
+
+                        <button
+                            onclick="increaseQuantity()">
+
+                            +
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STOCK -->
+
+                <div class="stock-status"
+                     id="stockStatus">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    In Stock
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="product-action-buttons">
+
+
+                    <button
+                        class="btn add-to-cart-detail"
+                        onclick="addProductToCart()">
+
+                        <i class="bi bi-bag-plus me-2"></i>
+
+                        Add to Cart
+
+                    </button>
+
+
+                    <button
+                        class="btn buy-now-detail"
+                        onclick="buyNow()">
+
+                        Buy Now
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="delivery-info">
+
+
+                    <div>
+
+                        <i class="bi bi-truck"></i>
+
+                        <div>
+
+                            <strong>
+                                Free Delivery
+                            </strong>
+
+                            <p>
+                                Delivery available across India
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                        <div>
+
+                            <strong>
+                                Easy Returns
+                            </strong>
+
+                            <p>
+                                7-day return policy
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCT INFORMATION TABS
+===================================================== -->
+
+<section class="product-information-section">
+
+    <div class="container">
+
+
+        <ul class="nav nav-tabs product-info-tabs"
+            role="tablist">
+
+
+            <li class="nav-item">
+
+                <button
+                    class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#descriptionTab">
+
+                    Description
+
+                </button>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#specificationTab">
+
+                    Specifications
+
+                </button>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#reviewTab">
+
+                    Reviews
+
+                </button>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <div class="tab-content product-tab-content">
+
+
+            <!-- DESCRIPTION -->
+
+            <div
+                class="tab-pane fade show active"
+                id="descriptionTab">
+
+                <h4>
+                    Product Description
+                </h4>
+
+                <p id="tabDescription">
+
+                    Product description will appear here.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SPECIFICATIONS -->
+
+            <div
+                class="tab-pane fade"
+                id="specificationTab">
+
+
+                <table class="table product-spec-table">
+
+
+                    <tr>
+
+                        <th>
+                            Brand
+                        </th>
+
+                        <td id="specBrand">
+                            Samsung
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th>
+                            Processor
+                        </th>
+
+                        <td id="specProcessor">
+                            Octa Core
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th>
+                            RAM
+                        </th>
+
+                        <td id="specRam">
+                            8 GB
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th>
+                            Storage
+                        </th>
+
+                        <td id="specStorage">
+                            256 GB
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th>
+                            Camera
+                        </th>
+
+                        <td id="specCamera">
+                            50 MP
+                        </td>
+
+                    </tr>
+
+
+                </table>
+
+
+            </div>
+
+
+
+            <!-- REVIEWS -->
+
+            <div
+                class="tab-pane fade"
+                id="reviewTab">
+
+
+                <div class="review-summary">
+
+
+                    <div>
+
+                        <strong id="reviewRating">
+                            4.8
+                        </strong>
+
+                        <span>
+                            / 5
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Based on
+
+                        <span id="reviewCount">
+                            126
+                        </span>
+
+                        customer reviews.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RELATED PRODUCTS
+===================================================== -->
+
+<section class="related-products-section">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+                YOU MAY ALSO LIKE
+            </span>
+
+            <h2>
+                Related Products
+            </h2>
+
+        </div>
+
+
+        <div
+            class="row g-4"
+            id="relatedProducts">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="store-footer">
+
+    <div class="container">
+
+
+        <div class="row g-4 py-5">
+
+
+            <div class="col-lg-4">
+
+
+                <a
+                    class="footer-brand"
+                    href="index.html">
+
+                    <i class="bi bi-lightning-charge-fill me-2"></i>
+
+                    ElectroMart
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Your destination for the latest electronics,
+                    smart gadgets and everyday technology essentials.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Quick Links
+                </h6>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="brands.html">
+                    Brands
+                </a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>
+                    Customer Care
+                </h6>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="cart.html">
+                    Shopping Cart
+                </a>
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h6>
+                    Contact Information
+                </h6>
+
+                <p>
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Hyderabad, Telangana, India
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope me-2"></i>
+                    support@electromart.example
+                </p>
+
+                <p>
+                    <i class="bi bi-clock me-2"></i>
+                    Customer support: Mon–Sat
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ElectroMart. All rights reserved.
+            </p>
+
+            <p>
+                Designed with
+                <i class="bi bi-heart-fill"></i>
+                for technology lovers.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+<!-- YOUR PRODUCT DATA -->
+
+<script src="products.js"></script>
+
+
+<script>
+
+
+// =========================================================
+// GET PRODUCT ID FROM URL
+// =========================================================
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+
+const productId =
+    urlParams.get("id");
+
+
+// Find product from products.js
+
+const product =
+    getProductById(productId);
+
+
+
+// =========================================================
+// CHECK PRODUCT
+// =========================================================
+
+if (!product) {
+
+    alert("Product not found!");
+
+    window.location.href = "shop.html";
+
+}
+
+
+
+// =========================================================
+// SHOW PRODUCT DETAILS
+// =========================================================
+
+else {
+
+
+    // PAGE TITLE
+
+    document.title =
+        product.name + " | ElectroMart";
+
+
+    // BREADCRUMB
+
+    document.getElementById("breadcrumbProduct")
+        .textContent = product.name;
+
+
+    // IMAGE
+
+    document.getElementById("mainProductImage")
+        .src = product.image;
+
+
+    document.getElementById("mainProductImage")
+        .alt = product.name;
+
+
+    // CATEGORY
+
+    document.getElementById("productCategory")
+        .textContent = product.category;
+
+
+    // NAME
+
+    document.getElementById("productName")
+        .textContent = product.name;
+
+
+    // RATING
+
+    document.getElementById("productRating")
+        .textContent = product.rating;
+
+
+    // REVIEWS
+
+    document.getElementById("productReviews")
+        .textContent = product.reviews;
+
+
+    // PRICE
+
+    document.getElementById("productPrice")
+        .textContent =
+        "₹" +
+        product.price.toLocaleString("en-IN");
+
+
+    // OLD PRICE
+
+    document.getElementById("productOldPrice")
+        .textContent =
+        "₹" +
+        product.oldPrice.toLocaleString("en-IN");
+
+
+    // DISCOUNT
+
+    document.getElementById("productDiscount")
+        .textContent =
+        product.discount + "% OFF";
+
+
+    document.getElementById("productDiscountText")
+        .textContent =
+        product.discount + "% OFF";
+
+
+    // DESCRIPTION
+
+    document.getElementById("productDescription")
+        .textContent =
+        product.description;
+
+
+    document.getElementById("tabDescription")
+        .textContent =
+        product.description;
+
+
+    // BRAND
+
+    document.getElementById("productBrand")
+        .textContent =
+        product.brand;
+
+
+    document.getElementById("specBrand")
+        .textContent =
+        product.brand;
+
+
+    // SPECIFICATIONS
+
+    document.getElementById("specProcessor")
+        .textContent =
+        product.features.processor;
+
+
+    document.getElementById("specRam")
+        .textContent =
+        product.features.ram;
+
+
+    document.getElementById("specStorage")
+        .textContent =
+        product.features.storage;
+
+
+    document.getElementById("specCamera")
+        .textContent =
+        product.features.camera;
+
+
+    // REVIEW
+
+    document.getElementById("reviewRating")
+        .textContent =
+        product.rating;
+
+
+    document.getElementById("reviewCount")
+        .textContent =
+        product.reviews;
+
+
+
+    // =====================================================
+    // FEATURES
+    // =====================================================
+
+    const featureBox =
+        document.getElementById("productFeatures");
+
+
+    featureBox.innerHTML = `
+
+        <div class="product-option">
+
+            <strong>Processor</strong>
+
+            <span>
+                ${product.features.processor}
+            </span>
+
+        </div>
+
+
+        <div class="product-option">
+
+            <strong>RAM</strong>
+
+            <span>
+                ${product.features.ram}
+            </span>
+
+        </div>
+
+
+        <div class="product-option">
+
+            <strong>Storage</strong>
+
+            <span>
+                ${product.features.storage}
+            </span>
+
+        </div>
+
+
+        <div class="product-option">
+
+            <strong>Camera</strong>
+
+            <span>
+                ${product.features.camera}
+            </span>
+
+        </div>
+
+    `;
+
+
+
+    // =====================================================
+    // STOCK
+    // =====================================================
+
+    const stockStatus =
+        document.getElementById("stockStatus");
+
+
+    if (product.stock > 0) {
+
+        stockStatus.innerHTML = `
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            In Stock
+            (${product.stock} available)
+
+        `;
+
+    }
+
+    else {
+
+        stockStatus.innerHTML = `
+
+            <i class="bi bi-x-circle-fill"></i>
+
+            Currently unavailable
+
+        `;
+
+    }
+
+
+
+    // =====================================================
+    // RELATED PRODUCTS
+    // =====================================================
+
+    const relatedProducts =
+        products.filter(function(item) {
+
+            return (
+                item.category === product.category &&
+                item.id !== product.id
+            );
+
+        }).slice(0, 3);
+
+
+    const relatedContainer =
+        document.getElementById("relatedProducts");
+
+
+    relatedProducts.forEach(function(item) {
+
+
+        relatedContainer.innerHTML += `
+
+            <div class="col-md-6 col-lg-4">
+
+
+                <div class="related-product-card">
+
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                        class="img-fluid">
+
+
+                    <div class="p-3">
+
+
+                        <small>
+                            ${item.category}
+                        </small>
+
+
+                        <h5>
+                            ${item.name}
+                        </h5>
+
+
+                        <strong>
+
+                            ₹${item.price.toLocaleString("en-IN")}
+
+                        </strong>
+
+
+                        <a
+                            href="product-details.html?id=${item.id}"
+                            class="btn btn-primary w-100 mt-3">
+
+                            View Product
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+
+// =========================================================
+// QUANTITY
+// =========================================================
+
+let quantity = 1;
+
+
+function increaseQuantity() {
+
+    if (quantity < 10) {
+
+        quantity++;
+
+        document.getElementById("quantity")
+            .textContent = quantity;
+
+    }
+
+}
+
+
+function decreaseQuantity() {
+
+    if (quantity > 1) {
+
+        quantity--;
+
+        document.getElementById("quantity")
+            .textContent = quantity;
+
+    }
+
+}
+
+
+
+// =========================================================
+// ADD TO CART
+// =========================================================
+
+function addProductToCart() {
+
+
+    if (!product) {
+        return;
+    }
+
+
+    let cart =
+
+        JSON.parse(
+            localStorage.getItem("electroMartCart")
+        ) || [];
+
+
+    const existingProduct =
+
+        cart.find(function(item) {
+
+            return item.id === product.id;
+
+        });
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity += quantity;
+
+    }
+
+    else {
+
+        cart.push({
+
+            id: product.id,
+
+            quantity: quantity
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+
+        "electroMartCart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+    alert("Product added to cart!");
+
+}
+
+
+
+// =========================================================
+// BUY NOW
+// =========================================================
+
+function buyNow() {
+
+    addProductToCart();
+
+    window.location.href = "cart.html";
+
+}
+
+
+
+// =========================================================
+// WISHLIST
+// =========================================================
+
+function addToWishlist() {
+
+
+    if (!product) {
+        return;
+    }
+
+
+    let wishlist =
+
+        JSON.parse(
+            localStorage.getItem("electroMartWishlist")
+        ) || [];
+
+
+    if (!wishlist.includes(product.id)) {
+
+
+        wishlist.push(product.id);
+
+
+        localStorage.setItem(
+
+            "electroMartWishlist",
+
+            JSON.stringify(wishlist)
+
+        );
+
+
+        alert("Product added to wishlist!");
+
+    }
+
+
+    else {
+
+        alert(
+            "Product is already in your wishlist!"
+        );
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```

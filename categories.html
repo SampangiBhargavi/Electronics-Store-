@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | ElectroMart</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shop-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i> ElectroMart
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link active" href="categories.html">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+                <li class="nav-item"><a class="nav-link" href="deals.html">Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 nav-actions">
+                <a href="wishlist.html" class="nav-icon" aria-label="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" aria-label="Cart">
+                    <i class="bi bi-cart3"></i>
+                </a>
+                <a href="login.html" class="btn login-btn">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="category-page-header">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <span class="section-label">EXPLORE OUR COLLECTION</span>
+                <h1>Shop by <span>Categories</span></h1>
+                <p>
+                    Find the right technology for your lifestyle.
+                    Explore our collection of electronics, gadgets and accessories.
+                </p>
+
+                <a href="#all-categories" class="btn category-primary-btn">
+                    Explore Categories <i class="bi bi-arrow-down"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-5 text-center">
+                <img
+                    src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=850&q=85"
+                    alt="Collection of electronic devices"
+                    class="category-hero-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Category Cards -->
+<section class="category-list-section" id="all-categories">
+    <div class="container">
+
+        <div class="text-center category-section-heading">
+            <span class="section-label">FIND YOUR FAVOURITES</span>
+            <h2>Browse Our Categories</h2>
+            <p>Discover the latest devices and everyday essentials.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Mobiles -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"
+                             alt="Smartphone">
+                        <span class="category-count">Mobiles</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Mobiles & Tablets</h3>
+                            <p>Smartphones, tablets and everyday mobile essentials.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop mobiles">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laptops -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+                             alt="Laptop computer">
+                        <span class="category-count">Computers</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Laptops & Computers</h3>
+                            <p>Powerful laptops and computers for work and study.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop laptops">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                             alt="Wireless headphones">
+                        <span class="category-count">Audio</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Audio & Headphones</h3>
+                            <p>Headphones, earbuds and speakers for every mood.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop audio devices">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smartwatches -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+                             alt="Smartwatch">
+                        <span class="category-count">Wearables</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Smartwatches</h3>
+                            <p>Smart wearables to keep you connected and active.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop smartwatches">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cameras -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80"
+                             alt="Digital camera">
+                        <span class="category-count">Photography</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Cameras & Photography</h3>
+                            <p>Capture your favourite moments with quality cameras.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop cameras">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gaming -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="category-card">
+                    <div class="category-card-image">
+                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=700&q=80"
+                             alt="Gaming setup">
+                        <span class="category-count">Gaming</span>
+                    </div>
+                    <div class="category-card-content">
+                        <div>
+                            <h3>Gaming & Accessories</h3>
+                            <p>Gaming equipment and accessories for your setup.</p>
+                        </div>
+                        <a href="shop.html" class="category-arrow" aria-label="Shop gaming accessories">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Promotional Banner -->
+<section class="category-promo-section">
+    <div class="container">
+        <div class="category-promo">
+            <div>
+                <span>YOUR NEXT UPGRADE STARTS HERE</span>
+                <h2>Great Technology.<br>Great Everyday Prices.</h2>
+                <p>Explore our electronics collection and find your next favourite device.</p>
+                <a href="shop.html" class="btn category-promo-btn">
+                    Shop All Products <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <i class="bi bi-bag-check category-promo-icon"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="store-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <a href="index.html" class="footer-brand">
+                    <i class="bi bi-lightning-charge-fill"></i> ElectroMart
+                </a>
+                <p class="footer-description">
+                    Your destination for electronics, smart gadgets and everyday technology.
+                </p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h5>Quick Links</h5>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="deals.html">Deals</a>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <h5>Customer Service</h5>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ElectroMart. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
+```

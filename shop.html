@@ -1,0 +1,1518 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Electronics | ElectroMart</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark shop-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="bi bi-lightning-charge-fill me-2"></i>
+
+            ElectroMart
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html">
+                        Categories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="brands.html">
+                        Brands
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="deals.html">
+                        Deals
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    aria-label="Wishlist">
+
+                    <i class="bi bi-heart"></i>
+
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="nav-icon"
+                    aria-label="Cart">
+
+                    <i class="bi bi-bag"></i>
+
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="btn login-btn">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="shop-page-header">
+
+    <div class="container">
+
+
+        <div class="shop-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span>
+                Shop
+            </span>
+
+        </div>
+
+
+        <div class="row align-items-center g-4">
+
+
+            <div class="col-lg-7">
+
+                <span class="section-label">
+                    DISCOVER OUR COLLECTION
+                </span>
+
+
+                <h1>
+                    Shop <span>Electronics</span>
+                </h1>
+
+
+                <p>
+
+                    Find your favourite gadgets, discover new technology
+                    and shop quality electronics for everyday life.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-5 text-lg-end">
+
+                <div class="shop-header-icon">
+
+                    <i class="bi bi-bag-heart"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOP CONTENT
+===================================================== -->
+
+<section class="shop-main-section">
+
+    <div class="container">
+
+
+        <!-- SEARCH AND SORT -->
+
+        <div class="shop-toolbar">
+
+
+            <div class="shop-result-text">
+
+                <h5>
+                    All Products
+                </h5>
+
+                <p>
+                    Explore our electronics collection
+                </p>
+
+            </div>
+
+
+            <div class="shop-toolbar-controls">
+
+
+                <!-- SEARCH -->
+
+                <div class="shop-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="productSearch"
+                        placeholder="Search products..."
+                        aria-label="Search products">
+
+                </div>
+
+
+                <!-- SORT -->
+
+                <select
+                    class="form-select shop-sort"
+                    id="productSort"
+                    aria-label="Sort products">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name: A to Z
+                    </option>
+
+                </select>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- =================================================
+                 FILTER SIDEBAR
+            ================================================= -->
+
+            <div class="col-lg-3">
+
+
+                <div class="shop-filter-card">
+
+
+                    <div class="filter-heading">
+
+                        <h5>
+
+                            <i class="bi bi-sliders me-2"></i>
+
+                            Filters
+
+                        </h5>
+
+
+                        <button
+                            type="button"
+                            id="clearFilters">
+
+                            Clear All
+
+                        </button>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- CATEGORY -->
+
+                    <h6>
+                        Categories
+                    </h6>
+
+
+                    <div class="filter-options">
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="all"
+                                checked>
+
+                            All Products
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="mobiles">
+
+                            Mobiles
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="laptops">
+
+                            Laptops
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="audio">
+
+                            Audio
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="watches">
+
+                            Smart Watches
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="cameras">
+
+                            Cameras
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="accessories">
+
+                            Accessories
+
+                        </label>
+
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- PRICE -->
+
+                    <h6>
+                        Price Range
+                    </h6>
+
+
+                    <div class="price-filter">
+
+
+                        <label for="maxPrice">
+                            Maximum price
+                        </label>
+
+
+                        <input
+                            type="range"
+                            class="form-range"
+                            id="maxPrice"
+                            min="1000"
+                            max="100000"
+                            step="1000"
+                            value="100000">
+
+
+                        <div class="price-range-label">
+
+                            <span>
+                                ₹1,000
+                            </span>
+
+
+                            <strong id="maxPriceLabel">
+                                ₹1,00,000
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <!-- STOCK -->
+
+                    <h6>
+                        Availability
+                    </h6>
+
+
+                    <label class="stock-filter">
+
+                        <input
+                            type="checkbox"
+                            id="inStock">
+
+                        In stock only
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUCT GRID
+            ================================================= -->
+
+            <div class="col-lg-9">
+
+
+                <div class="shop-active-filters">
+
+                    <span>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        Quality Products
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Secure Shopping
+
+                    </span>
+
+                </div>
+
+
+                <!--
+                    IMPORTANT:
+
+                    Products will be automatically
+                    created here from products.js
+                -->
+
+                <div
+                    class="row g-4"
+                    id="shopProductGrid">
+
+                </div>
+
+
+                <!-- NO PRODUCTS -->
+
+                <div
+                    id="noProducts"
+                    class="no-products"
+                    hidden>
+
+                    <i class="bi bi-search"></i>
+
+                    <h4>
+                        No products found
+                    </h4>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOP PROMO
+===================================================== -->
+
+<section class="shop-promo-section">
+
+    <div class="container">
+
+
+        <div class="shop-promo">
+
+
+            <div>
+
+                <span>
+                    SHOP WITH CONFIDENCE
+                </span>
+
+
+                <h2>
+                    Technology That Fits Your Life
+                </h2>
+
+
+                <p>
+                    Explore our collection and find your next
+                    favourite gadget.
+                </p>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="btn promo-btn">
+
+                Need Help?
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="store-footer">
+
+    <div class="container">
+
+
+        <div class="row g-4 py-5">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-4">
+
+
+                <a
+                    class="footer-brand"
+                    href="index.html">
+
+                    <i class="bi bi-lightning-charge-fill me-2"></i>
+
+                    ElectroMart
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Your destination for the latest electronics,
+                    smart gadgets and everyday technology essentials.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="bi bi-youtube"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+
+                <h6>
+                    Quick Links
+                </h6>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+
+                <a href="brands.html">
+                    Brands
+                </a>
+
+
+            </div>
+
+
+
+            <!-- CUSTOMER CARE -->
+
+            <div class="col-6 col-lg-2">
+
+
+                <h6>
+                    Customer Care
+                </h6>
+
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+
+                <a href="cart.html">
+                    Shopping Cart
+                </a>
+
+
+                <a href="wishlist.html">
+                    Wishlist
+                </a>
+
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4">
+
+
+                <h6>
+                    Contact Information
+                </h6>
+
+
+                <p>
+
+                    <i class="bi bi-geo-alt me-2"></i>
+
+                    Hyderabad, Telangana, India
+
+                </p>
+
+
+                <p>
+
+                    <i class="bi bi-envelope me-2"></i>
+
+                    support@electromart.example
+
+                </p>
+
+
+                <p>
+
+                    <i class="bi bi-clock me-2"></i>
+
+                    Customer support: Mon–Sat
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+                © 2026 ElectroMart. All rights reserved.
+            </p>
+
+
+            <p>
+
+                Designed with
+
+                <i class="bi bi-heart-fill"></i>
+
+                for technology lovers.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+<!-- IMPORTANT:
+     This loads your 12 products
+-->
+
+<script src="products.js"></script>
+
+
+
+<script>
+
+
+// =========================================================
+// GET HTML ELEMENTS
+// =========================================================
+
+const productGrid =
+    document.getElementById("shopProductGrid");
+
+const searchInput =
+    document.getElementById("productSearch");
+
+const sortSelect =
+    document.getElementById("productSort");
+
+const maxPrice =
+    document.getElementById("maxPrice");
+
+const maxPriceLabel =
+    document.getElementById("maxPriceLabel");
+
+const stockCheckbox =
+    document.getElementById("inStock");
+
+const noProducts =
+    document.getElementById("noProducts");
+
+
+
+// =========================================================
+// DISPLAY PRODUCTS
+// =========================================================
+
+function displayProducts(productList) {
+
+
+    // Clear old products
+
+    productGrid.innerHTML = "";
+
+
+    // If no products found
+
+    if (productList.length === 0) {
+
+        noProducts.hidden = false;
+
+        return;
+
+    }
+
+
+    noProducts.hidden = true;
+
+
+
+    // Create each product
+
+    productList.forEach(function(product) {
+
+
+        const productHTML = `
+
+
+            <div class="col-6 col-md-6 col-xl-4 shop-product">
+
+
+                <div class="product-card">
+
+
+                    <!-- DISCOUNT -->
+
+                    <span class="product-badge sale-badge">
+
+                        ${product.discount}% OFF
+
+                    </span>
+
+
+
+                    <!-- WISHLIST -->
+
+                    <button
+                        class="wishlist-btn"
+                        onclick="addToWishlist(${product.id})"
+                        aria-label="Add to wishlist">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+
+
+                    <!-- IMAGE -->
+
+                    <a
+                        href="product-details.html?id=${product.id}"
+                        class="product-image">
+
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}">
+
+
+                    </a>
+
+
+
+                    <!-- PRODUCT CONTENT -->
+
+                    <div class="product-content">
+
+
+                        <small>
+                            ${product.category}
+                        </small>
+
+
+
+                        <h5>
+
+                            <a
+                                href="product-details.html?id=${product.id}">
+
+                                ${product.name}
+
+                            </a>
+
+                        </h5>
+
+
+
+                        <!-- RATING -->
+
+                        <div class="rating">
+
+
+                            <i class="bi bi-star-fill"></i>
+
+
+                            ${product.rating}
+
+
+                            <span>
+
+                                (${product.reviews} reviews)
+
+                            </span>
+
+
+                        </div>
+
+
+
+                        <!-- PRICE -->
+
+                        <div class="price-row">
+
+
+                            <strong>
+
+                                ₹${product.price.toLocaleString("en-IN")}
+
+                            </strong>
+
+
+                            <del>
+
+                                ₹${product.oldPrice.toLocaleString("en-IN")}
+
+                            </del>
+
+
+                        </div>
+
+
+
+                        <!-- CART BUTTON -->
+
+                        ${
+                            product.stock > 0
+
+                            ?
+
+                            `
+
+                            <button
+                                class="btn add-cart-btn"
+                                onclick="addToCart(${product.id})">
+
+                                <i class="bi bi-bag-plus me-2"></i>
+
+                                Add to Cart
+
+                            </button>
+
+                            `
+
+                            :
+
+                            `
+
+                            <span class="stock-unavailable">
+
+                                Currently unavailable
+
+                            </span>
+
+                            `
+
+                        }
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        `;
+
+
+        productGrid.innerHTML += productHTML;
+
+
+    });
+
+}
+
+
+
+// =========================================================
+// FILTER PRODUCTS
+// =========================================================
+
+function filterProducts() {
+
+
+    const searchText =
+        searchInput.value.toLowerCase().trim();
+
+
+    const selectedCategory =
+        document.querySelector(
+            'input[name="category"]:checked'
+        ).value;
+
+
+    const priceLimit =
+        Number(maxPrice.value);
+
+
+    const stockOnly =
+        stockCheckbox.checked;
+
+
+
+    // Filter products
+
+    let filteredProducts =
+        products.filter(function(product) {
+
+
+            // SEARCH
+
+            const matchesSearch =
+
+                product.name
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                product.category
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                product.brand
+                    .toLowerCase()
+                    .includes(searchText);
+
+
+
+            // CATEGORY
+
+            let matchesCategory = true;
+
+
+            if (selectedCategory === "mobiles") {
+
+                matchesCategory =
+                    product.category === "Mobiles & Tablets";
+
+            }
+
+
+            else if (selectedCategory === "laptops") {
+
+                matchesCategory =
+                    product.category === "Laptops & Computers";
+
+            }
+
+
+            else if (selectedCategory === "audio") {
+
+                matchesCategory =
+                    product.category === "Audio & Headphones";
+
+            }
+
+
+            else if (selectedCategory === "watches") {
+
+                matchesCategory =
+                    product.category === "Smartwatches";
+
+            }
+
+
+            else if (selectedCategory === "cameras") {
+
+                matchesCategory =
+                    product.category === "Cameras & Photography";
+
+            }
+
+
+            else if (selectedCategory === "accessories") {
+
+                matchesCategory =
+                    product.category === "Gaming & Accessories";
+
+            }
+
+
+
+            // PRICE
+
+            const matchesPrice =
+                product.price <= priceLimit;
+
+
+
+            // STOCK
+
+            const matchesStock =
+                !stockOnly ||
+                product.stock > 0;
+
+
+
+            return (
+
+                matchesSearch &&
+
+                matchesCategory &&
+
+                matchesPrice &&
+
+                matchesStock
+
+            );
+
+
+        });
+
+
+
+    // =====================================================
+    // SORT
+    // =====================================================
+
+
+    if (sortSelect.value === "low") {
+
+
+        filteredProducts.sort(function(a, b) {
+
+            return a.price - b.price;
+
+        });
+
+
+    }
+
+
+    else if (sortSelect.value === "high") {
+
+
+        filteredProducts.sort(function(a, b) {
+
+            return b.price - a.price;
+
+        });
+
+
+    }
+
+
+    else if (sortSelect.value === "name") {
+
+
+        filteredProducts.sort(function(a, b) {
+
+            return a.name.localeCompare(b.name);
+
+        });
+
+
+    }
+
+
+
+    // Display filtered products
+
+    displayProducts(filteredProducts);
+
+}
+
+
+
+// =========================================================
+// ADD TO CART
+// =========================================================
+
+function addToCart(productId) {
+
+
+    let cart =
+
+        JSON.parse(
+            localStorage.getItem("electroMartCart")
+        ) || [];
+
+
+
+    const existingProduct =
+
+        cart.find(function(item) {
+
+            return item.id === productId;
+
+        });
+
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity++;
+
+    }
+
+
+    else {
+
+        cart.push({
+
+            id: productId,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+
+    localStorage.setItem(
+
+        "electroMartCart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+
+    alert("Product added to cart!");
+
+}
+
+
+
+// =========================================================
+// ADD TO WISHLIST
+// =========================================================
+
+function addToWishlist(productId) {
+
+
+    let wishlist =
+
+        JSON.parse(
+            localStorage.getItem("electroMartWishlist")
+        ) || [];
+
+
+
+    if (!wishlist.includes(productId)) {
+
+
+        wishlist.push(productId);
+
+
+
+        localStorage.setItem(
+
+            "electroMartWishlist",
+
+            JSON.stringify(wishlist)
+
+        );
+
+
+
+        alert("Product added to wishlist!");
+
+    }
+
+
+    else {
+
+        alert(
+            "Product is already in your wishlist!"
+        );
+
+    }
+
+}
+
+
+
+// =========================================================
+// SEARCH
+// =========================================================
+
+searchInput.addEventListener(
+    "input",
+    filterProducts
+);
+
+
+
+// =========================================================
+// SORT
+// =========================================================
+
+sortSelect.addEventListener(
+    "change",
+    filterProducts
+);
+
+
+
+// =========================================================
+// PRICE SLIDER
+// =========================================================
+
+maxPrice.addEventListener(
+    "input",
+    function() {
+
+
+        maxPriceLabel.textContent =
+
+            "₹" +
+
+            Number(maxPrice.value)
+                .toLocaleString("en-IN");
+
+
+        filterProducts();
+
+    }
+);
+
+
+
+// =========================================================
+// STOCK FILTER
+// =========================================================
+
+stockCheckbox.addEventListener(
+    "change",
+    filterProducts
+);
+
+
+
+// =========================================================
+// CATEGORY FILTER
+// =========================================================
+
+document
+    .querySelectorAll('input[name="category"]')
+    .forEach(function(radio) {
+
+
+        radio.addEventListener(
+            "change",
+            filterProducts
+        );
+
+
+    });
+
+
+
+// =========================================================
+// CLEAR FILTERS
+// =========================================================
+
+document
+    .getElementById("clearFilters")
+    .addEventListener(
+        "click",
+        function() {
+
+
+            searchInput.value = "";
+
+
+            sortSelect.value = "featured";
+
+
+            maxPrice.value = "100000";
+
+
+            maxPriceLabel.textContent =
+                "₹1,00,000";
+
+
+            stockCheckbox.checked = false;
+
+
+            document
+                .querySelector(
+                    'input[name="category"][value="all"]'
+                )
+                .checked = true;
+
+
+            filterProducts();
+
+
+        }
+    );
+
+
+
+// =========================================================
+// LOAD PRODUCTS
+// =========================================================
+
+// This displays all 12 products when
+// the Shop page opens.
+
+displayProducts(products);
+
+
+</script>
+
+
+</body>
+
+</html>
+```
